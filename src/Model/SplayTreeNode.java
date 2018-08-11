@@ -7,6 +7,10 @@ public class SplayTreeNode {
     private SplayTreeNode right;
     private Integer value;
 
+    public SplayTreeNode (Integer key) {
+        value = key;
+    }
+
     public SplayTreeNode getFather() {return father;}
     public void setFather(SplayTreeNode father) {this.father = father;}
     public SplayTreeNode getLeft() {return left;}

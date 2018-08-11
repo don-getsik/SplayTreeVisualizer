@@ -1,9 +1,19 @@
 package Operations;
 import Model.*;
 
-public class Rotate {
+class Rotate {
 
-    static boolean right(SplayTreeNode node) {
+    public enum RotateType {LEFT, RIGHT}
+
+    Rotate(SplayTreeNode node, RotateType type) {
+        boolean result;
+        if (type == RotateType.LEFT) result = left(node);
+        else result = right(node);
+
+        if (result) SetFather(node);
+    }
+
+    private boolean right(SplayTreeNode node) {
         SplayTreeNode leftChild =  node.getLeft();
 
         //If LeftChild is null we can't continue
@@ -23,12 +33,10 @@ public class Rotate {
         leftChild.setFather(father);
         node.setFather(leftChild);
 
-        SetFather(node, leftChild, father);
-
         return true;
     }
 
-    static boolean left (SplayTreeNode node) {
+    private boolean left (SplayTreeNode node) {
         SplayTreeNode rightChild = node.getRight();
 
         //If RightChild is null we can't continue
@@ -48,18 +56,19 @@ public class Rotate {
         rightChild.setFather(father);
         node.setFather(rightChild);
 
-        SetFather(node, rightChild, father);
-
         return true;
     }
 
-    private static void SetFather(SplayTreeNode node, SplayTreeNode rightChild, SplayTreeNode father) {
+    private void SetFather(SplayTreeNode node) {
+        SplayTreeNode child = node.getFather();
+        SplayTreeNode father = child.getFather();
+
         //If node isn't root
         if(father != null) {
-            if (father.getRight() == node) father.setRight(rightChild);
-            else father.setLeft(rightChild);
+            if (father.getRight() == node) father.setRight(child);
+            else father.setLeft(child);
         }
         //If node is root
-        else Root.set(rightChild);
+        else Root.set(child);
     }
 }
