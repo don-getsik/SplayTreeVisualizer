@@ -7,7 +7,7 @@ public class Insert {
     private boolean result;
 
     public Insert (Integer key) {
-        new Splay (key);
+        new Splay (key, SplayTreeNode.getRoot());
         SplayTreeNode root = SplayTreeNode.getRoot();
         if(root == null) {
             SplayTreeNode.setRoot(new SplayTreeNode(key));

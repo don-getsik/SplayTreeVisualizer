@@ -4,24 +4,26 @@ import pl.edu.wat.wcy.isi.Model.SplayTreeNode;
 import pl.edu.wat.wcy.isi.Operations.*;
 
 import javax.swing.*;
+import java.util.Random;
 
 public class SplayTree {
     private JPanel windowPanel;
     private JButton addButton;
     private JButton deleteButton;
     private JButton searchButton;
-    private JButton splayButton;
     private JTextField numberTextField;
     private JCheckBox entableAnimationCheckBox;
     private JButton prevButton;
     private JButton playButton;
     private JButton nextButton;
     private JButton addRandomButton;
-    private JTextField randomNumberTextField;
-    private JTextField maxRandomTextField;
-    private JTextField manRandomTextField;
     private JButton deleteAllButton;
     private JPanel treePanel;
+    private JTextField minTextField;
+    private JTextField maxTextField;
+    private JTextField sizeTextField;
+    private JPanel buttonsPanel;
+    private JPanel settingsPanel;
 
     private SplayTree() {
         addButton.addActionListener(e -> {
@@ -54,14 +56,25 @@ public class SplayTree {
                 numberTextField.setText("");
             }
         });
-        splayButton.addActionListener(e -> {
+
+        addRandomButton.addActionListener(e -> {
+            int size, min, max;
             try {
-                new Splay(Integer.parseInt(numberTextField.getText()));
+                size = Integer.parseInt(sizeTextField.getText());
+                min = Integer.parseInt(minTextField.getText());
+                max = Integer.parseInt(maxTextField.getText());
+
+                Random random = new Random();
+                while (size-- >= 0) {
+                    new Insert(random.nextInt(max - min)+min);
+                }
             }catch (NumberFormatException ex) {
                 System.out.print("Nie wpisano liczby!");
-            } finally {
+            }finally {
                 treePanel.repaint();
-                numberTextField.setText("");
+                sizeTextField.setText("");
+                minTextField.setText("");
+                maxTextField.setText("");
             }
         });
 

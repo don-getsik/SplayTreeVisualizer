@@ -6,13 +6,13 @@ class Rotate {
 
     public enum RotateType {LEFT, RIGHT}
 
-    Rotate(SplayTreeNode node, RotateType type) {
+    Rotate(SplayTreeNode node, RotateType type, SplayTreeNode root) {
         boolean result;
-        if (type == RotateType.LEFT) result = left(node);
-        else result = right(node);
+        if (type == RotateType.LEFT) result = left(node, root);
+        else result = right(node, root);
     }
 
-    private boolean right(SplayTreeNode node) {
+    private boolean right(SplayTreeNode node, SplayTreeNode root) {
         SplayTreeNode leftChild =  node.getLeft();
 
         //If LeftChild is null we can't continue
@@ -32,12 +32,12 @@ class Rotate {
         leftChild.setFather(father);
         node.setFather(leftChild);
 
-        setFather(node, leftChild, father);
+        setFather(node, leftChild, father, root);
 
         return true;
     }
 
-    private void setFather(SplayTreeNode node, SplayTreeNode leftChild, SplayTreeNode father) {
+    private void setFather(SplayTreeNode node, SplayTreeNode leftChild, SplayTreeNode father, SplayTreeNode root) {
         if(father != null) {
             if (father.getLeft() == node) father.setLeft(leftChild);
             else father.setRight(leftChild);
@@ -45,7 +45,7 @@ class Rotate {
         else SplayTreeNode.setRoot(leftChild);
     }
 
-    private boolean left (SplayTreeNode node) {
+    private boolean left (SplayTreeNode node, SplayTreeNode root) {
         SplayTreeNode rightChild = node.getRight();
 
         //If RightChild is null we can't continue
@@ -65,7 +65,7 @@ class Rotate {
         rightChild.setFather(father);
         node.setFather(rightChild);
 
-        setFather(node, rightChild, father);
+        setFather(node, rightChild, father, root);
 
         return true;
     }

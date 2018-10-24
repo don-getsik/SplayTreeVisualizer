@@ -7,7 +7,7 @@ public class Get {
     private boolean result;
 
     public Get (Integer key) {
-        new Splay(key);
+        new Splay(key, SplayTreeNode.getRoot());
         if (SplayTreeNode.isRoot())result = SplayTreeNode.getRoot().getValue().equals(key);
     }
 
