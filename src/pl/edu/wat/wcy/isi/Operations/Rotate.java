@@ -1,5 +1,6 @@
-package Operations;
-import Model.*;
+package pl.edu.wat.wcy.isi.Operations;
+
+import pl.edu.wat.wcy.isi.Model.SplayTreeNode;
 
 class Rotate {
 
@@ -9,8 +10,6 @@ class Rotate {
         boolean result;
         if (type == RotateType.LEFT) result = left(node);
         else result = right(node);
-
-        if (result) SetFather(node);
     }
 
     private boolean right(SplayTreeNode node) {
@@ -33,7 +32,17 @@ class Rotate {
         leftChild.setFather(father);
         node.setFather(leftChild);
 
+        setFather(node, leftChild, father);
+
         return true;
+    }
+
+    private void setFather(SplayTreeNode node, SplayTreeNode leftChild, SplayTreeNode father) {
+        if(father != null) {
+            if (father.getLeft() == node) father.setLeft(leftChild);
+            else father.setRight(leftChild);
+        }
+        else SplayTreeNode.setRoot(leftChild);
     }
 
     private boolean left (SplayTreeNode node) {
@@ -56,19 +65,10 @@ class Rotate {
         rightChild.setFather(father);
         node.setFather(rightChild);
 
+        setFather(node, rightChild, father);
+
         return true;
     }
 
-    private void SetFather(SplayTreeNode node) {
-        SplayTreeNode child = node.getFather();
-        SplayTreeNode father = child.getFather();
 
-        //If node isn't root
-        if(father != null) {
-            if (father.getRight() == node) father.setRight(child);
-            else father.setLeft(child);
-        }
-        //If node is root
-        else Root.set(child);
-    }
 }
