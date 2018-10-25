@@ -2,7 +2,6 @@ package pl.edu.wat.wcy.isi.GUI;
 
 import pl.edu.wat.wcy.isi.Model.SplayTreeNode;
 import pl.edu.wat.wcy.isi.Operations.*;
-
 import javax.swing.*;
 import java.util.Random;
 
@@ -24,37 +23,28 @@ public class SplayTree {
     private JTextField sizeTextField;
     private JPanel buttonsPanel;
     private JPanel settingsPanel;
+    private JTextArea textArea1;
 
     private SplayTree() {
         addButton.addActionListener(e -> {
             try {
                 new Insert(Integer.parseInt(numberTextField.getText()));
-            }catch (NumberFormatException ex) {
-                System.out.print("Nie wpisano liczby!");
-            } finally {
-                treePanel.repaint();
-                numberTextField.setText("");
-            }
+            }catch (NumberFormatException ex) { System.out.print("Nie wpisano liczby!");
+            } finally {endDrawTree(); }
         });
+
         deleteButton.addActionListener(e -> {
             try {
                 new Delete(Integer.parseInt(numberTextField.getText()));
-            }catch (NumberFormatException ex) {
-                System.out.print("Nie wpisano liczby!");
-            } finally {
-                treePanel.repaint();
-                numberTextField.setText("");
-            }
+            }catch (NumberFormatException ex) { System.out.print("Nie wpisano liczby!");
+            } finally { endDrawTree(); }
         });
+
         searchButton.addActionListener(e -> {
             try {
                 new Get(Integer.parseInt(numberTextField.getText()));
-            }catch (NumberFormatException ex) {
-                System.out.print("Nie wpisano liczby!");
-            } finally {
-                treePanel.repaint();
-                numberTextField.setText("");
-            }
+            }catch (NumberFormatException ex) { System.out.print("Nie wpisano liczby!");
+            } finally {endDrawTree(); }
         });
 
         addRandomButton.addActionListener(e -> {
@@ -68,19 +58,21 @@ public class SplayTree {
                 while (size-- >= 0) {
                     new Insert(random.nextInt(max - min)+min);
                 }
-            }catch (NumberFormatException ex) {
-                System.out.print("Nie wpisano liczby!");
-            }finally {
-                treePanel.repaint();
-                sizeTextField.setText("");
-                minTextField.setText("");
-                maxTextField.setText("");
-            }
+            }catch (NumberFormatException ex) { System.out.print("Nie wpisano liczby!");
+            }finally {endDrawTree(); }
         });
 
         deleteAllButton.addActionListener(e -> SplayTreeNode.deleteAll());
 
-        playButton.addActionListener(e -> SplayTreeNode.paintTree());
+    }
+
+    private void endDrawTree() {
+        SplayTreeNode.setAllColorsBlack();
+        treePanel.repaint();
+        numberTextField.setText("");
+        sizeTextField.setText("");
+        minTextField.setText("");
+        maxTextField.setText("");
     }
 
     public static void main(String[] args) {

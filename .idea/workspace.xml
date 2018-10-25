@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2969ee31-4119-499f-ab20-0ad1458bea65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SprayTree.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SprayTree.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Delete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Get.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Get.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Insert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Rotate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Rotate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Splay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Splay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/TreeJPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/TreeJPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Model/SplayTreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Model/SplayTreeNode.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,16 +55,17 @@
     <session id="1842831867">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="form" value="2" />
           <entry key="iml" value="1" />
+          <entry key="java" value="4" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
@@ -79,19 +73,22 @@
         <counts>
           <entry key="GUI_DESIGNER_FORM" value="2" />
           <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="4" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="iml" value="2" />
-          <entry key="java" value="371" />
+          <entry key="java" value="974" />
+          <entry key="txt" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="371" />
+          <entry key="JAVA" value="974" />
+          <entry key="PLAIN_TEXT" value="19" />
         </counts>
       </usages-collector>
     </session>
@@ -101,45 +98,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+            <state relative-caret-position="778">
+              <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2430#2431#0" expanded="true" />
-                <element signature="e#2478#2479#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Delete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SprayTree.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -171,9 +134,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.form">
           <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/TreeJPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Model/SplayTreeNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="39" column="69" lean-forward="true" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -217,16 +198,17 @@
         <option value="$PROJECT_DIR$/src/pl/edy/way/wcy/isi/TreeJPanel.java" />
         <option value="$PROJECT_DIR$/src/pl/edy/way/wcy/isi/Model/Root.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Model/Root.java" />
-        <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Model/SplayTreeNode.java" />
-        <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/TreeJPanel.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Insert.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Get.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Rotate.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Delete.java" />
         <option value="$PROJECT_DIR$/SprayTree.iml" />
         <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Splay.java" />
-        <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.java" />
         <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.form" />
+        <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/Colors.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Model/SplayTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/TreeJPanel.java" />
       </list>
     </option>
   </component>
@@ -248,6 +230,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -255,11 +239,6 @@
             <path>
               <item name="SplayTreeVisualizer" type="b2602c69:ProjectViewProjectNode" />
               <item name="SplayTreeVisualizer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SplayTreeVisualizer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SplayTreeVisualizer" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SplayTreeVisualizer" type="b2602c69:ProjectViewProjectNode" />
@@ -292,14 +271,19 @@
               <item name="SplayTreeVisualizer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="isi" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SplayTreeVisualizer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SplayTreeVisualizer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="isi" type="462c0819:PsiDirectoryNode" />
               <item name="Operations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -307,7 +291,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="326" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540367526730" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540463267607" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -409,18 +393,27 @@
       <workItem from="1539156067055" duration="7576000" />
       <workItem from="1539766304651" duration="4945000" />
       <workItem from="1540366593284" duration="943000" />
-      <workItem from="1540368010983" duration="1052000" />
+      <workItem from="1540368010983" duration="2517000" />
+      <workItem from="1540458353112" duration="2900000" />
     </task>
+    <task id="LOCAL-00001" summary="Auto add configured">
+      <created>1540369234656</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540369234656</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30786000" />
+    <option name="totallyTimeSpent" value="35151000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18017058" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -430,7 +423,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3108108" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3108108" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991684" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -457,6 +450,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Auto add configured" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auto add configured" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.desktop/java/awt/GridLayout.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
@@ -468,26 +465,6 @@
     <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Main.java" />
     <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/lang/NumberFormatException.java" />
     <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/lang/Integer.java" />
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/TreeJPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Model/SplayTreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-          <folding>
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1101#1102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Delete.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -505,6 +482,13 @@
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Get.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -519,20 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Rotate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="50" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Splay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -540,20 +510,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Operations/Rotate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="50" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/Colors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+        <state relative-caret-position="778">
+          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2430#2431#0" expanded="true" />
-            <element signature="e#2478#2479#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/SplayTree.form">
       <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Model/SplayTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="39" column="69" lean-forward="true" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/GUI/TreeJPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
