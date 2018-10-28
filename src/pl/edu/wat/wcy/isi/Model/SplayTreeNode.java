@@ -15,6 +15,10 @@ public class SplayTreeNode {
     static public boolean isRoot() {return root != null;}
     static public void setRoot (SplayTreeNode node) {root = node;}
 
+    public SplayTreeNode(Integer value, Color color) {
+        this.value = value;
+        this.color = color;
+    }
 
     public SplayTreeNode (Integer key) {
         value = key;
@@ -36,13 +40,20 @@ public class SplayTreeNode {
         return value.toString();
     }
 
-    public static void deleteAll() { root = null; }
+    public static void deleteAll() {
+        root = null;
+        SplayTreeContainer.get().addTree("");
+    }
     public static void setAllColorsBlack () { root.setColorBlack(); }
 
     private void setColorBlack () {
         color = Color.BLACK;
         if(left != null) left.setColorBlack();
         if(right != null) right.setColorBlack();
+    }
+
+    public void colorBlack (SplayTreeNode... splayTreeNodes) {
+        for (SplayTreeNode node: splayTreeNodes) if(node != null) node.setColor(Color.BLACK);
     }
 }
 

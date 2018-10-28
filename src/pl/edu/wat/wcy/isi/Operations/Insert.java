@@ -1,47 +1,69 @@
 package pl.edu.wat.wcy.isi.Operations;
 
+import pl.edu.wat.wcy.isi.Model.SplayTreeContainer;
 import pl.edu.wat.wcy.isi.Model.SplayTreeNode;
+
+import java.awt.*;
 
 public class Insert {
 
-    private boolean result;
-
     public Insert (Integer key) {
+        SplayTreeContainer.get().addTree("Wykoywanie opracji dodawania węzła " + key);
         new Splay (key, SplayTreeNode.getRoot());
         SplayTreeNode root = SplayTreeNode.getRoot();
         if(root == null) {
             SplayTreeNode.setRoot(new SplayTreeNode(key));
-            result = true;
+            SplayTreeContainer.get().addTree("Drzewo jest puste, więc dodajemy bez dodatkowych operacji");
         }
         else if (root.getValue().equals(key))
-            result = false;
+            SplayTreeContainer.get().addTree("W drzewie znajduje się już węzeł " + key);
         else if(root.getValue().compareTo(key) < 0) {
-            SplayTreeNode tmp = root.getRight();
-            SplayTreeNode newNode = new SplayTreeNode(key);
-            newNode.setLeft(root);
-            newNode.getLeft().setFather(newNode);
-            root.setRight(null);
-            if (tmp != null) {
-                newNode.setRight(tmp);
-                newNode.getRight().setFather(newNode);
-            }
-            SplayTreeNode.setRoot(newNode);
-            result = true;
+            adAsLeftRoot(key, root);
         }
         else if(root.getValue().compareTo(key) > 0) {
-            SplayTreeNode tmp = root.getLeft();
-            SplayTreeNode newNode = new SplayTreeNode(key);
-            newNode.setRight(root);
-            newNode.getRight().setFather(newNode);
-            root.setLeft(null);
-            if (tmp != null) {
-                newNode.setLeft(tmp);
-                newNode.getLeft().setFather(newNode);
-            }
-            SplayTreeNode.setRoot(newNode);
-            result = true;
+            adAsRightRoot(key, root);
         }
     }
 
-    public boolean getResult () {return result;}
+    private void adAsRightRoot(Integer key, SplayTreeNode root) {
+        SplayTreeNode tmp = root.getLeft();
+        SplayTreeNode newNode = new SplayTreeNode(key);
+        if(tmp != null)tmp.setColor(Color.BLUE);
+        newNode.setColor(Color.CYAN);
+        root.setColor(Color.RED);
+        SplayTreeContainer.get().addTree("Korzeń jest większy od dodawanego węzła, " +
+                "więc korzeń stanie się jego prawym potomkiem");
+        newNode.setRight(root);
+        newNode.getRight().setFather(newNode);
+        root.setLeft(null);
+        if (tmp != null) {
+            newNode.setLeft(tmp);
+            newNode.getLeft().setFather(newNode);
+        }
+        SplayTreeNode.setRoot(newNode);
+        SplayTreeContainer.get().addTree("Zakończono proces dodawania węzła" + key);
+        root.colorBlack(root, tmp, root.getRight());
+        SplayTreeContainer.get().addTree("");
+    }
+
+    private void adAsLeftRoot(Integer key, SplayTreeNode root) {
+        SplayTreeNode tmp = root.getRight();
+        SplayTreeNode newNode = new SplayTreeNode(key);
+        if(tmp != null)tmp.setColor(Color.BLUE);
+        newNode.setColor(Color.CYAN);
+        root.setColor(Color.RED);
+        SplayTreeContainer.get().addTree("Korzeń jest mniejszy od dodawanego węzła, " +
+                "więc korzeń stanie się jego lewym potomkiem");
+        newNode.setLeft(root);
+        newNode.getLeft().setFather(newNode);
+        root.setRight(null);
+        if (tmp != null) {
+            newNode.setRight(tmp);
+            newNode.getRight().setFather(newNode);
+        }
+        SplayTreeNode.setRoot(newNode);
+        SplayTreeContainer.get().addTree("Zakończono proces dodawania węzła " + key);
+        root.colorBlack(newNode, tmp, newNode.getLeft());
+        SplayTreeContainer.get().addTree("");
+    }
 }

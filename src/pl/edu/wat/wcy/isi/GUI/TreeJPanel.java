@@ -1,5 +1,6 @@
 package pl.edu.wat.wcy.isi.GUI;
 
+import pl.edu.wat.wcy.isi.Model.SplayTreeContainer;
 import pl.edu.wat.wcy.isi.Model.SplayTreeNode;
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +14,7 @@ public class TreeJPanel extends JPanel {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
 
-        SplayTreeNode node = SplayTreeNode.getRoot();
+        SplayTreeNode node = SplayTreeContainer.get().getTree().getRoot();
 
         if(node != null) paintNode(node, g2d, 50.0,getWidth()/2.0, 3.0, getWidth() /2.0 - 20);
     }
@@ -32,9 +33,9 @@ public class TreeJPanel extends JPanel {
         sw/=2.0;
 
         if (node.getLeft() != null)
-            paintNode(node.getLeft(), g2d, radius, w-sw/2.0, h, sw);
+            paintNode(node.getLeft(), g2d, radius, w-sw, h, sw);
         if (node.getRight() != null)
-            paintNode(node.getRight(), g2d, radius, w+sw/2.0, h, sw);
+            paintNode(node.getRight(), g2d, radius, w+sw, h, sw);
     }
 
     private void drawLines(Graphics2D g2d, double radius, double w, double h, double sw, double spacing) {
