@@ -2,7 +2,6 @@ package pl.edu.wat.wcy.isi.Operations;
 
 import pl.edu.wat.wcy.isi.Model.SplayTreeContainer;
 import pl.edu.wat.wcy.isi.Model.SplayTreeNode;
-
 import java.awt.*;
 
 public class Insert {
@@ -27,10 +26,8 @@ public class Insert {
 
     private void adAsRightRoot(Integer key, SplayTreeNode root) {
         SplayTreeNode tmp = root.getLeft();
-        SplayTreeNode newNode = new SplayTreeNode(key);
-        if(tmp != null)tmp.setColor(Color.BLUE);
-        newNode.setColor(Color.CYAN);
-        root.setColor(Color.RED);
+
+        SplayTreeNode newNode = preConfigure(key, root, tmp);
         SplayTreeContainer.get().addTree("Korzeń jest większy od dodawanego węzła, " +
                 "więc korzeń stanie się jego prawym potomkiem");
         newNode.setRight(root);
@@ -40,18 +37,13 @@ public class Insert {
             newNode.setLeft(tmp);
             newNode.getLeft().setFather(newNode);
         }
-        SplayTreeNode.setRoot(newNode);
-        SplayTreeContainer.get().addTree("Zakończono proces dodawania węzła" + key);
-        root.colorBlack(root, tmp, root.getRight());
-        SplayTreeContainer.get().addTree("");
+        afterConfigure(key, newNode);
     }
 
     private void adAsLeftRoot(Integer key, SplayTreeNode root) {
         SplayTreeNode tmp = root.getRight();
-        SplayTreeNode newNode = new SplayTreeNode(key);
-        if(tmp != null)tmp.setColor(Color.BLUE);
-        newNode.setColor(Color.CYAN);
-        root.setColor(Color.RED);
+
+        SplayTreeNode newNode = preConfigure(key, root, tmp);
         SplayTreeContainer.get().addTree("Korzeń jest mniejszy od dodawanego węzła, " +
                 "więc korzeń stanie się jego lewym potomkiem");
         newNode.setLeft(root);
@@ -61,9 +53,22 @@ public class Insert {
             newNode.setRight(tmp);
             newNode.getRight().setFather(newNode);
         }
+
+        afterConfigure(key, newNode);
+    }
+
+    private SplayTreeNode preConfigure(Integer key, SplayTreeNode root, SplayTreeNode tmp) {
+        SplayTreeNode newNode = new SplayTreeNode(key);
+        if (tmp != null) tmp.setColor(Color.BLUE);
+        newNode.setColor(Color.CYAN);
+        root.setColor(Color.RED);
+        return newNode;
+    }
+
+    private void afterConfigure(Integer key, SplayTreeNode newNode) {
         SplayTreeNode.setRoot(newNode);
-        SplayTreeContainer.get().addTree("Zakończono proces dodawania węzła " + key);
-        root.colorBlack(newNode, tmp, newNode.getLeft());
+        SplayTreeContainer.get().addTree("Zakończono proces dodawania węzła "+ key);
+        SplayTreeNode.setAllColorsBlack();
         SplayTreeContainer.get().addTree("");
     }
 }

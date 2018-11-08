@@ -15,21 +15,31 @@ public class Delete {
             SplayTreeContainer.get().addTree("Drzewo jest puste. Brak możliwości usunięcia węxła");
         }
         else if (root.getValue().equals(key)) {
-            root.setColor(Color.PINK);
-            root.getRight().setColor(Color.CYAN);
-            SplayTreeContainer.get().addTree("Podmiana węzła " + root.getValue() + " za największy element z lewego poddrzewa");
-            SplayTreeNode right = root.getRight();
-            SplayTreeNode.setRoot(root.getLeft());
-            root = SplayTreeNode.getRoot();
-            root.setFather(null);
-            new Splay(Integer.MAX_VALUE, root);
-            root.setRight(right);
-            right.setFather(root);
-            SplayTreeContainer.get().addTree("Zakończenie opreracji Delete");
-            root.setColor(Color.BLACK);
-            right.setColor(Color.BLACK);
-            SplayTreeContainer.get().addTree("");
+            deleteOperation(root);
         }
         else SplayTreeContainer.get().addTree("W drzewie nie ma węzła " + key);
+    }
+
+    private void deleteOperation(SplayTreeNode root) {
+        root.setColor(Color.PINK);
+        root.getRight().setColor(Color.CYAN);
+        SplayTreeContainer.get().addTree("Podmiana węzła " + root.getValue() + " za największy element z lewego poddrzewa");
+
+        SplayTreeNode right = root.getRight();
+        SplayTreeNode.setRoot(root.getLeft());
+        root = SplayTreeNode.getRoot();
+        root.setFather(null);
+
+        new Splay(Integer.MAX_VALUE, root);
+        root = SplayTreeNode.getRoot();
+        SplayTreeContainer.get().addTree("Dołączenie prawgo poddrzewa");
+
+        root.setRight(right);
+        right.setFather(root);
+        SplayTreeContainer.get().addTree("Zakończenie opreracji Delete");
+
+        root.setColor(Color.BLACK);
+        right.setColor(Color.BLACK);
+        SplayTreeContainer.get().addTree("");
     }
 }

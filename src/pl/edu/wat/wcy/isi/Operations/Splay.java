@@ -19,32 +19,32 @@ public class Splay {
         SplayTreeContainer.get().addTree("Wyszukiwanie węzła do ustawienia jako korzeń");
         do {
             if(x.getValue().equals(key)) break;
-            tmp = x;                // Zapamiętujemy adres węzła
+            tmp = x;                // Remember node adress
             x = (key < x.getValue() ? x.getLeft(): x.getRight());
         } while(x != null);
 
         if(x == null) x = tmp;
         SplayTreeContainer.get().addTree("Wezęł " + x.getValue() + " będzie obiektem naszych działań");
-        // bierzemy bezpośredni następnik lub poprzednik
+        // get next or prev
         while(x.getFather() != null)    {
-            // Ojcem x jest korzeń. Wykonujemy ZIG i kończymy
+            // x father is root
             if(x.getFather().getFather() == null) {
                 zig(root, x);
                 return;
             }
-            // prawy ZIG-ZIG
+            // right ZIG-ZIG
             if((x.getFather().getFather().getLeft() == x.getFather()) && (x.getFather().getLeft() == x)) {
                 rightZigZig(root, x);
                 continue;
             }
-            // lewy ZIG-ZIG
+            // left ZIG-ZIG
             if((x.getFather().getFather().getRight() == x.getFather()) && (x.getFather().getRight() == x)) {
                 leftZigZig(root, x);
                 continue;
             }
-            // lewy ZIG, prawy ZAG
+            // left ZIG, right ZAG
             if(x.getFather().getRight() == x)leftZigRightZag(root, x);
-            // prawy ZIG, lewy ZAG
+            // left ZIG, right ZAG
             else rightZigLeftZag(root, x);
         }
         SplayTreeContainer.get().addTree("Zakończenie działania algorytmu Splay");
@@ -52,74 +52,93 @@ public class Splay {
 
     private void rightZigLeftZag(SplayTreeNode root, SplayTreeNode x) {
         SplayTreeContainer.get().addTree("Wykonywanie operacji prawy ZIG, lwey ZAG na węźle " + x.getValue());
-        SplayTreeNode node = x, father = x.getFather();
-        node.setColor(Color.BLUE);
+        SplayTreeNode father = x.getFather();
+
+        x.setColor(Color.BLUE);
         father.setColor(Color.RED);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w prawo na węźle " + father.getValue());
+
         new Rotate(x.getFather(), Rotate.RotateType.RIGHT, root);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w lewo na węźle " + father.getValue());
+
         new Rotate (x.getFather(), Rotate.RotateType.LEFT, root);
-        SplayTreeContainer.get().addTree("Zakończono wykonywanie operacji ZIG-ZAG na węźle " + node.getValue());
-        node.colorBlack(node, father);
+        SplayTreeContainer.get().addTree("Zakończono wykonywanie operacji ZIG-ZAG na węźle " + x.getValue());
+
+        x.colorBlack(x, father);
     }
 
     private void leftZigRightZag(SplayTreeNode root, SplayTreeNode x) {
         SplayTreeContainer.get().addTree("Wykonywanie operacji lewy ZIG, prawy ZAG na węźle " + x.getValue());
-        SplayTreeNode node = x, father = x.getFather();
-        node.setColor(Color.BLUE);
+        SplayTreeNode father = x.getFather();
+
+        x.setColor(Color.BLUE);
         father.setColor(Color.RED);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w lewo na węźle " + father.getValue());
+
         new Rotate(x.getFather(), Rotate.RotateType.LEFT, root);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w prawo na węźle " + father.getValue());
+
         new Rotate (x.getFather(), Rotate.RotateType.RIGHT, root);
-        SplayTreeContainer.get().addTree("Zakończono wykonywanie operacji ZIG-ZAG na węźle " + node.getValue());
-        node.colorBlack(node, father);
+        SplayTreeContainer.get().addTree("Zakończono wykonywanie operacji ZIG-ZAG na węźle " + x.getValue());
+
+        x.colorBlack(x, father);
     }
 
     private void leftZigZig(SplayTreeNode root, SplayTreeNode x) {
         SplayTreeContainer.get().addTree("Wykonywanie operacji lewy ZIG-ZIG na węźle " + x.getValue());
-        SplayTreeNode node = x, father = x.getFather(), grandpa = x.getFather().getFather();
-        node.setColor(Color.BLUE);
+        SplayTreeNode father = x.getFather(), grandpa = x.getFather().getFather();
+
+        x.setColor(Color.BLUE);
         father.setColor(Color.RED);
         grandpa.setColor(Color.DARK_GRAY);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w lewo na węźle " + grandpa.getValue());
+
         new Rotate(x.getFather().getFather(), Rotate.RotateType.LEFT, root);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w lewo na węźle " + grandpa.getValue());
+
         new Rotate (x.getFather(), Rotate.RotateType.LEFT, root);
-        SplayTreeContainer.get().addTree("Zakończono wykonywanie operacji ZIG-ZIG na węźle " + node.getValue());
-        node.colorBlack(node, father, grandpa);
+        SplayTreeContainer.get().addTree("Zakończono wykonywanie operacji ZIG-ZIG na węźle " + x.getValue());
+
+        x.colorBlack(x, father, grandpa);
     }
 
     private void rightZigZig(SplayTreeNode root, SplayTreeNode x) {
         SplayTreeContainer.get().addTree("Wykonywanie operacji prawy ZIG-ZIG na węźle " + x.getValue());
-        SplayTreeNode node = x, father = x.getFather(), grandpa = x.getFather().getFather();
-        node.setColor(Color.BLUE);
+        SplayTreeNode father = x.getFather(), grandpa = x.getFather().getFather();
+
+        x.setColor(Color.BLUE);
         father.setColor(Color.RED);
         grandpa.setColor(Color.DARK_GRAY);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w prawo na węźle " + grandpa.getValue());
+
         new Rotate(grandpa, Rotate.RotateType.RIGHT, root);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w prawo na węźle " + grandpa.getValue());
+
         new Rotate (father, Rotate.RotateType.RIGHT, root);
-        SplayTreeContainer.get().addTree("Zakończono wykonywanie operacji ZIG-ZIG na węźle " + node.getValue());
-        node.colorBlack(node, father, grandpa);
+        SplayTreeContainer.get().addTree("Zakończono wykonywanie operacji ZIG-ZIG na węźle " + x.getValue());
+
+        x.colorBlack(x, father, grandpa);
     }
 
     private void zig(SplayTreeNode root, SplayTreeNode x) {
-        SplayTreeNode node = x, father = x.getFather();
-        node.setColor(Color.BLUE);
+        SplayTreeNode father = x.getFather();
+
+        x.setColor(Color.BLUE);
         father.setColor(Color.RED);
         if(x.getFather().getLeft() == x) {
             SplayTreeContainer.get().addTree(
                     "Wykonujemy operację ZIG poprzez rotację w lewo na weźle " + x.getFather().getValue());
             new Rotate(x.getFather(), Rotate.RotateType.RIGHT, root);
         }
+
         else {
             SplayTreeContainer.get().addTree(
                     "Wykonujemy operację ZIG poprzez rotację w prawo na weźle " + x.getFather().getValue());
             new Rotate(x.getFather(), Rotate.RotateType.LEFT, root);
         }
-        SplayTreeContainer.get().addTree("Zakończono wykonywanie oparacji ZIG na węźle " + node.getValue());
-        node.setColor(Color.BLACK);
+
+        SplayTreeContainer.get().addTree("Zakończono wykonywanie oparacji ZIG na węźle " + x.getValue());
+        x.setColor(Color.BLACK);
         father.setColor(Color.BLACK);
     }
 }

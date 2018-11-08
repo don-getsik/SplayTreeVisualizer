@@ -101,6 +101,7 @@ public class SplayTree {
         SplayTreeNode.setAllColorsBlack();
         if(entableAnimationCheckBox.isSelected()) SplayTreeContainer.get().nextTree();
         else SplayTreeContainer.get().setLastTree();
+        InstructionArea.setText(SplayTreeContainer.get().getTree().getInstruction());
         treePanel.repaint();
         numberTextField.setText("");
         sizeTextField.setText("");

@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
+import java.util.Map;
 
 public class TreeJPanel extends JPanel {
 
@@ -14,9 +15,17 @@ public class TreeJPanel extends JPanel {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
 
+        RenderingHints rh = g2d.getRenderingHints();
+
+        rh.clear();
+        rh.add(new RenderingHints(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON));
+        rh.add(new RenderingHints(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON));
+        g2d.setRenderingHints(rh);
+
+
         SplayTreeNode node = SplayTreeContainer.get().getTree().getRoot();
 
-        if(node != null) paintNode(node, g2d, 50.0,getWidth()/2.0, 3.0, getWidth() /2.0 - 20);
+        if(node != null) paintNode(node, g2d, 50.0,getWidth()/2.0, 10.0, getWidth() /2.0 - 20);
     }
 
     private void paintNode (SplayTreeNode node, Graphics2D g2d, double radius, double w, double h, double sw) {
@@ -28,7 +37,7 @@ public class TreeJPanel extends JPanel {
         drawString(node, g2d, w, h, halfRadius);
         drawLines(g2d, radius, w, h, sw, spacing);
 
-        h+=spacing+radius;
+        h+=spacing+radius-5;
         radius-=5;
         sw/=2.0;
 
