@@ -14,6 +14,8 @@ public class SplayTreeContainer {
     public void nextTree() {if (actualTreeNumber < splayTrees.size()-1) actualTreeNumber++;}
     public void prevTree() {if (actualTreeNumber > 0) actualTreeNumber--;}
 
+    public boolean isNextTree() { return actualTreeNumber < splayTrees.size() - 1; }
+
     public SplayTree getNextTree() {
         return actualTreeNumber < splayTrees.size() ? splayTrees.get(actualTreeNumber++) : null;
     }

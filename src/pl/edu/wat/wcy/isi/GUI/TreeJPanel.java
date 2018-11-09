@@ -31,13 +31,13 @@ public class TreeJPanel extends JPanel {
     private void paintNode (SplayTreeNode node, Graphics2D g2d, double radius, double w, double h, double sw) {
 
         double halfRadius = radius/2.0;
-        double spacing = getHeight()/15.0;
+        double spacing = getHeight()/18.0;
 
         drawCircle(g2d, radius, w, h, node.getColor());
         drawString(node, g2d, w, h, halfRadius);
         drawLines(g2d, radius, w, h, sw, spacing);
 
-        h+=spacing+radius-5;
+        h+=spacing+radius;
         radius-=5;
         sw/=2.0;
 
@@ -62,7 +62,7 @@ public class TreeJPanel extends JPanel {
     }
 
     private void drawString(SplayTreeNode node, Graphics2D g2d, double w, double h, double halfRadius) {
-        g2d.setFont(new Font("Serif", Font.BOLD, (int)halfRadius));
+        g2d.setFont(new Font("Serif", Font.BOLD, (int)halfRadius+3));
         g2d.setPaint(Color.WHITE);
         FontMetrics fm = g2d.getFontMetrics();
 

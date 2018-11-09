@@ -12,7 +12,7 @@ public class SplayTree {
     private JButton deleteButton;
     private JButton searchButton;
     private JTextField numberTextField;
-    private JCheckBox entableAnimationCheckBox;
+    private JCheckBox animationCheckBox;
     private JButton prevButton;
     private JButton playButton;
     private JButton nextButton;
@@ -22,9 +22,15 @@ public class SplayTree {
     private JTextField minTextField;
     private JTextField maxTextField;
     private JTextField sizeTextField;
-    private JPanel buttonsPanel;
-    private JPanel settingsPanel;
     private JTextArea InstructionArea;
+    private JPanel settingsPanel;
+    private JPanel buttonsPanel;
+    private JSlider timeSlider;
+    private JCheckBox autoplayCheckBox;
+    private JPanel minPanel;
+    private JPanel maxPanel;
+    private JPanel sizePanel;
+    private Timer timer;
 
     private SplayTree() {
         addButton.addActionListener(e -> {
@@ -72,6 +78,19 @@ public class SplayTree {
             }
         });
 
+        animationCheckBox.addChangeListener(e-> {
+            if(!animationCheckBox.isSelected()) {
+                autoplayCheckBox.setSelected(false);
+                autoplayCheckBox.setEnabled(false);
+            }
+            else {
+                autoplayCheckBox.setSelected(true);
+                autoplayCheckBox.setEnabled(true);
+            }
+        });
+
+        timeSlider.addChangeListener(e -> timer.setDelay(timeSlider.getValue()*1000));
+
         nextButton.addActionListener(e -> {
             SplayTreeContainer.get().nextTree();
             InstructionArea.setText(SplayTreeContainer.get().getTree().getInstruction());
@@ -89,6 +108,10 @@ public class SplayTree {
             setLastTree();
         });
 
+        playButton.addActionListener(e -> {
+            if(timer.isRunning()) stopTimer();
+            else playTimer();
+        });
     }
 
     private void setLastTree() {
@@ -99,7 +122,7 @@ public class SplayTree {
 
     private void endDrawTree() {
         SplayTreeNode.setAllColorsBlack();
-        if(entableAnimationCheckBox.isSelected()) SplayTreeContainer.get().nextTree();
+        if(animationCheckBox.isSelected()) SplayTreeContainer.get().nextTree();
         else SplayTreeContainer.get().setLastTree();
         InstructionArea.setText(SplayTreeContainer.get().getTree().getInstruction());
         treePanel.repaint();
@@ -107,6 +130,7 @@ public class SplayTree {
         sizeTextField.setText("");
         minTextField.setText("");
         maxTextField.setText("");
+        if(autoplayCheckBox.isSelected()) playTimer();
     }
 
     public static void main(String[] args) {
@@ -114,11 +138,32 @@ public class SplayTree {
         frame.setContentPane(new SplayTree().windowPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
     }
 
     private void createUIComponents() {
-            treePanel = new TreeJPanel();
+        treePanel = new TreeJPanel();
+        timer = new Timer(5000, e-> play());
+        timer.setInitialDelay(0);
+    }
+
+    private void stopTimer() {
+        timer.stop();
+        playButton.setText("▶");
+    }
+
+    private void playTimer() {
+        timer.start();
+        playButton.setText("❚❚");
+    }
+
+    private void play() {
+        if (SplayTreeContainer.get().isNextTree()) {
+            SplayTreeContainer.get().nextTree();
+            InstructionArea.setText(SplayTreeContainer.get().getTree().getInstruction());
+            treePanel.repaint();
+        }
+        else stopTimer();
     }
 }

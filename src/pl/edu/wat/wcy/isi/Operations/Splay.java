@@ -5,9 +5,9 @@ import pl.edu.wat.wcy.isi.Model.SplayTreeNode;
 
 import java.awt.*;
 
-public class Splay {
+class Splay {
 
-    public Splay (Integer key, SplayTreeNode root) {
+    Splay(Integer key, SplayTreeNode root) {
         SplayTreeContainer.get().addTree("Rozpoczęcie procesu splay");
         SplayTreeNode x = root;
         SplayTreeNode tmp = null;
@@ -90,7 +90,7 @@ public class Splay {
 
         x.setColor(Color.BLUE);
         father.setColor(Color.RED);
-        grandpa.setColor(Color.DARK_GRAY);
+        grandpa.setColor(Color.GREEN);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w lewo na węźle " + grandpa.getValue());
 
         new Rotate(x.getFather().getFather(), Rotate.RotateType.LEFT, root);
@@ -108,7 +108,7 @@ public class Splay {
 
         x.setColor(Color.BLUE);
         father.setColor(Color.RED);
-        grandpa.setColor(Color.DARK_GRAY);
+        grandpa.setColor(Color.GREEN);
         SplayTreeContainer.get().addTree("Wykonywanie rotacji w prawo na węźle " + grandpa.getValue());
 
         new Rotate(grandpa, Rotate.RotateType.RIGHT, root);
