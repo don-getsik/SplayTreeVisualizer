@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SprayTree.iml" filepath="$PROJECT_DIR$/SprayTree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SplayTreeVisualizer.iml" filepath="$PROJECT_DIR$/SplayTreeVisualizer.iml" />
     </modules>
   </component>
 </project>
