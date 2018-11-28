@@ -343,12 +343,12 @@
             </constraints>
             <properties>
               <majorTickSpacing value="1"/>
-              <maximum value="12"/>
+              <maximum value="8"/>
               <minimum value="1"/>
               <paintLabels value="true"/>
               <paintTicks value="true"/>
               <snapToTicks value="true"/>
-              <value value="5"/>
+              <value value="2"/>
             </properties>
           </component>
           <component id="22571" class="javax.swing.JCheckBox" binding="autoplayCheckBox">
