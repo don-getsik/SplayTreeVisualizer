@@ -30,30 +30,64 @@ public class SplayTree {
     private JPanel minPanel;
     private JPanel maxPanel;
     private JPanel sizePanel;
+    private JButton splayButton;
+    private JButton stateButton;
     private Timer timer;
 
     private SplayTree() {
         addButton.addActionListener(e -> {
             setLastTree();
             try {
-                new Insert(Integer.parseInt(numberTextField.getText()));
-            }catch (NumberFormatException ex) { System.out.print("Nie wpisano liczby!");
+                if (Integer.parseInt(numberTextField.getText()) > 100) {
+                    JOptionPane.showMessageDialog(null, "Wprowadzono za dużą liczbę");
+                } else if (Integer.parseInt(numberTextField.getText()) < 0) {
+                    JOptionPane.showMessageDialog(null, "Wprowadzono za małą liczbę");
+                } else {
+                    new Insert(Integer.parseInt(numberTextField.getText()));
+                }
+            }catch (NumberFormatException ex) { JOptionPane.showMessageDialog(null, "Wprowadzono nieprawidłową liczbę");
             } finally {endDrawTree(); }
         });
 
         deleteButton.addActionListener(e -> {
             setLastTree();
             try {
-                new Delete(Integer.parseInt(numberTextField.getText()));
-            }catch (NumberFormatException ex) { System.out.print("Nie wpisano liczby!");
+                if (Integer.parseInt(numberTextField.getText()) > 100) {
+                    JOptionPane.showMessageDialog(null, "Wprowadzono za dużą liczbę");
+                } else if (Integer.parseInt(numberTextField.getText()) < 0) {
+                    JOptionPane.showMessageDialog(null, "Wprowadzono za małą liczbę");
+                } else {
+                    new Delete(Integer.parseInt(numberTextField.getText()));
+                }
+            }catch (NumberFormatException ex) { JOptionPane.showMessageDialog(null, "Wprowadzono nieprawidłową liczbę");
             } finally { endDrawTree(); }
+        });
+
+        splayButton.addActionListener(e -> {
+            setLastTree();
+            try {
+                if (Integer.parseInt(numberTextField.getText()) > 100) {
+                    JOptionPane.showMessageDialog(null, "Wprowadzono za dużą liczbę");
+                } else if (Integer.parseInt(numberTextField.getText()) < 0) {
+                    JOptionPane.showMessageDialog(null, "Wprowadzono za małą liczbę");
+                } else {
+                    new Splay(Integer.parseInt(numberTextField.getText()), SplayTreeNode.getRoot());
+                }
+            }catch (NumberFormatException ex) { JOptionPane.showMessageDialog(null, "Wprowadzono nieprawidłową liczbę");
+            } finally {endDrawTree(); }
         });
 
         searchButton.addActionListener(e -> {
             setLastTree();
             try {
-                new Get(Integer.parseInt(numberTextField.getText()));
-            }catch (NumberFormatException ex) { System.out.print("Nie wpisano liczby!");
+                if (Integer.parseInt(numberTextField.getText()) > 100) {
+                    JOptionPane.showMessageDialog(null, "Wprowadzono za dużą liczbę");
+                } else if (Integer.parseInt(numberTextField.getText()) < 0) {
+                    JOptionPane.showMessageDialog(null, "Wprowadzono za małą liczbę");
+                } else {
+                    new Get(Integer.parseInt(numberTextField.getText()));
+                }
+            }catch (NumberFormatException ex) { JOptionPane.showMessageDialog(null, "Wprowadzono nieprawidłową liczbę");
             } finally {endDrawTree(); }
         });
 
@@ -84,9 +118,13 @@ public class SplayTree {
                 autoplayCheckBox.setEnabled(false);
             }
             else {
-                autoplayCheckBox.setSelected(true);
                 autoplayCheckBox.setEnabled(true);
             }
+        });
+
+        stateButton.addActionListener(e -> {
+            SplayTreeNode root = SplayTreeContainer.get().getTree().getRoot();
+            new StateMessage(root);
         });
 
         timeSlider.addChangeListener(e -> timer.setDelay(timeSlider.getValue()*1000));
@@ -139,13 +177,18 @@ public class SplayTree {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setLocationRelativeTo(null);
+
+        System.setProperty("awt.useSystemAAFontSettings","on");
+        System.setProperty("swing.aatext", "true");
+        System.setProperty("prism.lcdtext", "false");
+
         frame.setVisible(true);
     }
 
     private void createUIComponents() {
         treePanel = new TreeJPanel();
         timer = new Timer(5000, e-> play());
-        timer.setInitialDelay(0);
+        timer.stop();
     }
 
     private void stopTimer() {

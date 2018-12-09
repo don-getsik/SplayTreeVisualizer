@@ -35,7 +35,7 @@ public class TreeJPanel extends JPanel {
 
         drawCircle(g2d, radius, w, h, node.getColor());
         drawString(node, g2d, w, h, halfRadius);
-        drawLines(g2d, radius, w, h, sw, spacing);
+        drawLines(g2d, node, radius, w, h, sw, spacing);
 
         h+=spacing+radius;
         radius-=5;
@@ -47,7 +47,7 @@ public class TreeJPanel extends JPanel {
             paintNode(node.getRight(), g2d, radius, w+sw, h, sw);
     }
 
-    private void drawLines(Graphics2D g2d, double radius, double w, double h, double sw, double spacing) {
+    private void drawLines(Graphics2D g2d, SplayTreeNode node,double radius, double w, double h, double sw, double spacing) {
         g2d.setPaint(Color.BLACK);
 
         double halfRadius = radius/2.0;
@@ -57,8 +57,8 @@ public class TreeJPanel extends JPanel {
         double x2r = (w+halfRadius-2.5)+sw/2.0;
         double y2  = h+spacing+radius;
 
-        g2d.draw(new Line2D.Double(x1,y1,x2l,y2));
-        g2d.draw(new Line2D.Double(x1,y1,x2r,y2));
+        if(node.getLeft()!=null) g2d.draw(new Line2D.Double(x1,y1,x2l,y2));
+        if(node.getRight()!=null)g2d.draw(new Line2D.Double(x1,y1,x2r,y2));
     }
 
     private void drawString(SplayTreeNode node, Graphics2D g2d, double w, double h, double halfRadius) {

@@ -5,9 +5,9 @@ import pl.edu.wat.wcy.isi.Model.SplayTreeNode;
 
 import java.awt.*;
 
-class Splay {
+public class Splay {
 
-    Splay(Integer key, SplayTreeNode root) {
+    public Splay(Integer key, SplayTreeNode root) {
         SplayTreeContainer.get().addTree("Rozpoczęcie procesu splay");
         SplayTreeNode x = root;
         SplayTreeNode tmp = null;
