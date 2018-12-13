@@ -1,7 +1,8 @@
 package pl.edu.wat.wcy.isi.Operations;
 
-import pl.edu.wat.wcy.isi.Model.SplayTree;
 import pl.edu.wat.wcy.isi.Model.SplayTreeNode;
+
+import java.util.HashMap;
 
 public class Statistics {
 
@@ -52,7 +53,7 @@ public class Statistics {
             return getLeafCount(node.getLeft()) + getLeafCount(node.getRight());
     }
 
-    int minimumDepth()
+    public int minimumDepth()
     {
         return minimumDepth(root);
     }
@@ -79,5 +80,42 @@ public class Statistics {
 
         return Math.min(minimumDepth(root.getLeft()),
                 minimumDepth(root.getRight())) + 1;
+    }
+
+    public String VerticalSumMain() { return VerticalSum(root); }
+
+    // A wrapper over VerticalSumUtil()
+    private String VerticalSum(SplayTreeNode root) {
+
+        // base case
+        if (root == null) { return ""; }
+
+        // Creates an empty hashMap hM
+        HashMap<Integer, Integer> hM = new HashMap<>();
+
+        // Calls the VerticalSumUtil() to store the
+        // vertical sum values in hM
+        VerticalSumUtil(root, 0, hM);
+
+        // Prints the values stored by VerticalSumUtil()
+        return  hM.entrySet().toString();
+    }
+
+    // Traverses the tree in Inoorder form and builds
+    // a hashMap hM that contains the vertical sum
+    private void VerticalSumUtil(SplayTreeNode root, int hD, HashMap<Integer, Integer> hM) {
+
+        // base case
+        if (root == null) {  return; }
+
+        // Store the values in hM for left subtree
+        VerticalSumUtil(root.getLeft(), hD - 1, hM);
+
+        // Update vertical sum for hD of this node
+        int prevSum = (hM.get(hD) == null) ? 0 : hM.get(hD);
+        hM.put(hD, prevSum + root.getValue());
+
+        // Store the values in hM for right subtree
+        VerticalSumUtil(root.getRight(), hD + 1, hM);
     }
 }

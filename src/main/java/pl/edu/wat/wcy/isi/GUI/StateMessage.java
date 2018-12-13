@@ -28,12 +28,15 @@ class StateMessage extends JFrame {
         panel.add(addLabel("Ilość węzłów: " + statistics.countNodes()));
         panel.add(addLabel("Ilość liści: " + statistics.getLeafCount()));
         panel.add(addLabel("Maksymalna łębkokość drzewa: " + statistics.treeDepth()));
+        panel.add(addLabel("Minimalna głębkokość drzewa: " + statistics.minimumDepth()));
         panel.add(addLabel("Pre order:"));
         panel.add(addLabel(arrayToString(treeOrder.getPreOrder())));
         panel.add(addLabel("In order:"));
         panel.add(addLabel(arrayToString(treeOrder.getInOrder())));
         panel.add(addLabel("Post order:"));
         panel.add(addLabel(arrayToString(treeOrder.getPostOrder())));
+        panel.add(addLabel("Sumy poziomów:"));
+        panel.add(addLabel(statistics.VerticalSumMain()));
         return panel;
     }
 
