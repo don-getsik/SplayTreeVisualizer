@@ -127,7 +127,7 @@ public class SplayTree {
             new StateMessage(root);
         });
 
-        timeSlider.addChangeListener(e -> timer.setDelay(timeSlider.getValue()*1000));
+        timeSlider.addChangeListener(e -> timer.setDelay(timeSlider.getValue()*500));
 
         nextButton.addActionListener(e -> {
             SplayTreeContainer.get().nextTree();

@@ -6,14 +6,12 @@ import pl.edu.wat.wcy.isi.Operations.TreeOrder;
 import javax.swing.*;
 import java.awt.*;
 
-public class StateMessage extends JFrame {
+class StateMessage extends JFrame {
 
-    private SplayTreeNode root;
     private Statistics statistics;
     private TreeOrder treeOrder;
 
     StateMessage (SplayTreeNode root) {
-        this.root = root;
         this.statistics = new Statistics(root);
         this.treeOrder = new TreeOrder(root);
         setContentPane(crateMessage());
@@ -27,8 +25,9 @@ public class StateMessage extends JFrame {
     private Container crateMessage() {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.add(addLabel("Suma węzłów: " + statistics.countNodes()));
-        panel.add(addLabel("Głębkokość drzewa: " + statistics.treeDepth()));
+        panel.add(addLabel("Ilość węzłów: " + statistics.countNodes()));
+        panel.add(addLabel("Ilość liści: " + statistics.getLeafCount()));
+        panel.add(addLabel("Maksymalna łębkokość drzewa: " + statistics.treeDepth()));
         panel.add(addLabel("Pre order:"));
         panel.add(addLabel(arrayToString(treeOrder.getPreOrder())));
         panel.add(addLabel("In order:"));
