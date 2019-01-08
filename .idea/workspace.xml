@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2969ee31-4119-499f-ab20-0ad1458bea65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SplayTreeVisualizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SplayTreeVisualizer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SplayTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SplayTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/StateMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/StateMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Delete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Delete.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,11 +17,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SplayTree.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Insert.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="129" column="80" selection-start-line="129" selection-start-column="80" selection-end-line="129" selection-end-column="80" />
+            <state relative-caret-position="255">
+              <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Delete.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/StateMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SmoothLabel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="306">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -42,75 +60,61 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/StateMessage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Get.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="9" selection-end-column="89" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Statistics.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Rotate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1079#1080#0" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-                <element signature="e#1446#1447#0" expanded="true" />
-                <element signature="e#1487#1488#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="680">
+              <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/TreeOrder.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Splay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+            <state relative-caret-position="306">
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SplayTree.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/TreeJPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" selection-start-line="12" selection-end-line="28" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/description.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Model/SplayTreeContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="272">
+              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Model/SplayTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="e#981#982#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SplayTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="516">
+              <caret line="105" column="120" selection-start-line="105" selection-start-column="120" selection-end-line="105" selection-end-column="120" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,6 +175,7 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SmoothLabel.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Statistics.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/StateMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Delete.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SplayTree.java" />
       </list>
     </option>
@@ -199,10 +204,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="447" />
-    <option name="y" value="233" />
-    <option name="width" value="1314" />
-    <option name="height" value="782" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -210,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -294,7 +300,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,7 +307,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="326" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544356466856" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546522609250" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -432,6 +437,9 @@
       <workItem from="1544112833474" duration="53000" />
       <workItem from="1544350260849" duration="6302000" />
       <workItem from="1544695808932" duration="2038000" />
+      <workItem from="1546507774238" duration="5847000" />
+      <workItem from="1546892247793" duration="814000" />
+      <workItem from="1546973518462" duration="1427000" />
     </task>
     <task id="LOCAL-00001" summary="Auto add configured">
       <created>1540369234656</created>
@@ -486,7 +494,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60289000" />
+    <option name="totallyTimeSpent" value="68377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -498,9 +506,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1043" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13368984" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1684435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -510,7 +519,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.30879122" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.30877572" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3978022" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -530,7 +539,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.078891255" />
-      <window_info anchor="right" id="Maven" order="9" visible="true" weight="0.09090909" />
+      <window_info anchor="right" id="Maven" order="9" visible="true" weight="0.090618335" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,18 +595,6 @@
     <MESSAGE value="Dodanie dodatkowych statystyk" />
     <option name="LAST_COMMIT_MESSAGE" value="Dodanie dodatkowych statystyk" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/TreeOrder.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.desktop/java/awt/GridLayout.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
@@ -620,35 +617,7 @@
     <entry file="file://$PROJECT_DIR$/src/pl/edu/wat/wcy/isi/Model/SplayTreeHistory.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/RenderingHints.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.desktop/java/awt/Graphics2D.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Get.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="9" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/jgoodies-forms-1.4.0.jar!/com/jgoodies/forms/layout/FormLayout.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Rotate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Delete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="41" column="36" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Model/SplayTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/awt/event/ActionListener.class" />
     <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__joodies_forms_1_0_5.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
@@ -661,43 +630,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Model/SplayTreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Insert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Splay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SmoothLabel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Statistics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="1190">
+          <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SplayTree.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/description.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/TreeOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
+        <state relative-caret-position="697">
           <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
         </state>
       </provider>
@@ -709,54 +670,228 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+    <entry file="uml://JAVA/pl.edu.wat.wcy.isi">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>pl.edu.wat.wcy.isi</OriginalElement>
+          <nodes>
+            <node x="43.21875" y="146.951171875">pl.edu.wat.wcy.isi.Operations</node>
+            <node x="110.97916666666667" y="246.951171875">pl.edu.wat.wcy.isi.GUI</node>
+            <node x="50.0" y="16.951171875">pl.edu.wat.wcy.isi.Model</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="pl.edu.wat.wcy.isi.GUI" target="pl.edu.wat.wcy.isi.GUI">
+              <point x="0.0" y="15.0" />
+              <point x="159.97916666666666" y="296.951171875" />
+              <point x="90.97916666666667" y="296.951171875" />
+              <point x="90.97916666666667" y="261.951171875" />
+              <point x="-49.0" y="-0.0" />
+            </edge>
+            <edge source="pl.edu.wat.wcy.isi.GUI" target="pl.edu.wat.wcy.isi.Model">
+              <point x="32.66666666666666" y="-15.0" />
+              <point x="192.64583333333331" y="226.951171875" />
+              <point x="190.71875" y="226.951171875" />
+              <point x="190.71875" y="116.951171875" />
+              <point x="155.9375" y="116.951171875" />
+              <point x="49.4375" y="15.0" />
+            </edge>
+            <edge source="pl.edu.wat.wcy.isi.Operations" target="pl.edu.wat.wcy.isi.Model">
+              <point x="45.66666666666666" y="-15.0" />
+              <point x="157.38541666666666" y="126.951171875" />
+              <point x="141.8125" y="126.951171875" />
+              <point x="35.3125" y="15.0" />
+            </edge>
+            <edge source="pl.edu.wat.wcy.isi.GUI" target="pl.edu.wat.wcy.isi.Operations">
+              <point x="0.0" y="-15.0" />
+              <point x="159.97916666666666" y="226.951171875" />
+              <point x="163.09375" y="226.951171875" />
+              <point x="51.375" y="15.0" />
+            </edge>
+            <edge source="pl.edu.wat.wcy.isi.Operations" target="pl.edu.wat.wcy.isi.Operations">
+              <point x="-17.125" y="15.0" />
+              <point x="94.59375" y="206.951171875" />
+              <point x="13.21875" y="206.951171875" />
+              <point x="13.21875" y="154.451171875" />
+              <point x="-68.5" y="-7.5" />
+            </edge>
+            <edge source="pl.edu.wat.wcy.isi.Model" target="pl.edu.wat.wcy.isi.Model">
+              <point x="-7.0625" y="15.0" />
+              <point x="99.4375" y="96.951171875" />
+              <point x="0.0" y="96.951171875" />
+              <point x="0.0" y="20.701171875" />
+              <point x="-56.5" y="-11.25" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-382.0" y="-44.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/description.html">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="uml://JAVA/pl.edu.wat.wcy.isi.Operations">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>pl.edu.wat.wcy.isi.Operations</OriginalElement>
+          <nodes>
+            <node x="" y="">pl.edu.wat.wcy.isi.Operations.Insert</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.Operations.Statistics</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.Operations.TreeOrder</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.Operations.Rotate</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.Operations.Get</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.Operations.Splay</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.Operations.Delete</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="92.0" y="197.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/pl.edu.wat.wcy.isi.GUI">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>pl.edu.wat.wcy.isi.GUI</OriginalElement>
+          <nodes>
+            <node x="" y="">pl.edu.wat.wcy.isi.GUI.StateMessage</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.GUI.SmoothLabel</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.GUI.TreeJPanel</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.GUI.SplayTree</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="96.0" y="91.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/pl.edu.wat.wcy.isi.Model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>pl.edu.wat.wcy.isi.Model</OriginalElement>
+          <nodes>
+            <node x="" y="">pl.edu.wat.wcy.isi.Model.SplayTreeContainer</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.Model.SplayTreeNode</node>
+            <node x="" y="">pl.edu.wat.wcy.isi.Model.SplayTree</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="47.0" y="460.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Model/SplayTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Get.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="9" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Rotate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Splay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Model/SplayTreeContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        <state relative-caret-position="272">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Statistics.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Insert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="80" column="44" selection-start-line="80" selection-start-column="44" selection-end-line="80" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="17" column="88" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/StateMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="323">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SplayTree.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SmoothLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Operations/Delete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/Model/SplayTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#981#982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/wat/wcy/isi/GUI/SplayTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="129" column="80" selection-start-line="129" selection-start-column="80" selection-end-line="129" selection-end-column="80" />
+        <state relative-caret-position="516">
+          <caret line="105" column="120" selection-start-line="105" selection-start-column="120" selection-end-line="105" selection-end-column="120" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

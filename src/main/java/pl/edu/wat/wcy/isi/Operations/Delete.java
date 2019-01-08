@@ -22,7 +22,7 @@ public class Delete {
 
     private void deleteOperation(SplayTreeNode root) {
         root.setColor(Color.PINK);
-        root.getRight().setColor(Color.CYAN);
+        if (root.getRight() != null) root.getRight().setColor(Color.CYAN);
         SplayTreeContainer.get().addTree("Podmiana węzła " + root.getValue() + " za największy element z lewego poddrzewa");
 
         SplayTreeNode right = root.getRight();

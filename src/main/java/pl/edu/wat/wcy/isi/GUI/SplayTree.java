@@ -103,7 +103,7 @@ public class SplayTree {
                 while (size-- >= 0) {
                     new Insert(random.nextInt(max - min)+min);
                 }
-            }catch (NumberFormatException ex) { System.out.print("Nie wpisano liczby!");
+            }catch (NumberFormatException ex) { JOptionPane.showMessageDialog(null, "Wprowadzono nieprawidłową liczbę");
             }finally {
                 setLastTree();
                 sizeTextField.setText("");
